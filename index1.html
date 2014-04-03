@@ -1,0 +1,1021 @@
+	<html  lang="pt-br">
+		<meta charset="UTF-8">
+		<head>
+			<title>Proiz - Versão 1</title>
+			<link type="text/css" rel="stylesheet" href="css/styles.css">
+			<link type="text/css" rel="stylesheet" href="css/styles-responsive.css">
+			
+			<script src="js/jquery.1.10.2.js" type="text/javascript"></script>
+			
+			<!-- Esse js cria os efeitos nos textos, e movimentação, mais em  http://johnpolacek.github.io/scrollorama/-->
+			<script src="js/jquery.scrollorama.js" type="text/javascript"></script>
+			<!-- Esse js da o efeito de scroll suave ao navegar pela pagina -->
+			<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+			
+			<!-- Esse js da faz a verificação se um elemento esta visivel ou nao na tela -->
+			<script src="js/jquery.visible.min.js" type="text/javascript"></script>
+			
+			<!-- Essa é o arquivo de efeitos padrão -->
+			<script src="js/main.js" type="text/javascript"></script>	
+			
+			<!-- Essa é o arquivo de efeitos da pagina inicial -->
+			<script src="js/index.js" type="text/javascript"></script>	
+			
+		</head>
+	<body class="corpo">
+		<style>
+			#carregando {
+				position: fixed;
+				top: 0;
+				right: 0;
+				border-style: solid;
+				border-width: 0 90px 90px 0;
+				border-color: transparent #004961 transparent transparent;
+			}
+			#carregando img{
+				position: absolute;
+				top: 6;
+				right: -90;
+			}
+		</style>
+		<div id="header">
+			<div id="logo">
+				<img src="images/logo_proiz.png" />
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html">QUEM SOMOS</a></li>
+					<li><a href="#especialidades">ESPECIALIDADES</a></li>
+					<li><a href="trabalhos.html">TRABALHOS</a></li>
+					<li><a href="#noticias">NOTÍCIAS</a></li>
+					<li><a href="#contato">CONTATO</a></li>
+				</ul>
+				<a href="#" id="pull">Menu</a> 
+				<div id="carregando">
+					<img src="images/carregando.png" />
+				</div>
+			</div>
+			<div id="redes">
+				
+			</div>
+		</div>
+		
+		<div id="content">
+			<div id="home_intro" class="wrapper">
+				<h1>
+					<span><p class="verde">Inovação</p><p class="cinza">,</p></span>
+					<span><p class="azul">criatividade</p></span> 
+					<span><p class="cinza">e&nbsp;</p><p class="amarelo"> transformação</p></span>
+				</h1>
+				<div class="mensagem">
+					<div class="continue">
+						<h2>CONTINUE VENDO</h2>
+						<div class="circulo">
+							<img src="images/home_seta.png"/>			
+						</div>
+					</div>
+					<div class="somos">
+						<h4>
+							Somos uma agência de comunicação integrada e pensamos o Branding como uma transformação holística de marcas.
+						</h4>
+					</div>
+				</div>
+			</div>
+			
+			<div id="intervalo1" class="intervalo">
+			</div>
+			<style>
+				#home_trabalhos .projetos_slider .slider_menu {
+					/*position: absolute;
+					bottom: 0;
+					background: #fff;
+					padding: 20px 0 10px 100px;*/
+					position: absolute;
+					bottom: 0;
+					background: #fff;
+					width: 100%;
+					padding: 20px 0px;
+				}
+				#home_trabalhos .projetos_slider .slider_menu input[type="range"]{
+					width: 98%;
+					-webkit-appearance: none;
+					background-color: #e6e7e8;
+					padding: 0 25px;
+					margin: 0 10px;
+					height: 10px;
+					-webkit-border-radius: 7px;
+					-moz-border-radius: 7px;
+					border-radius: 7px;
+					cursor: pointer;
+					color: #00c;
+				}
+				#home_trabalhos .projetos_slider .slider_menu input[type="range"]:focus {
+					outline: none;
+				}
+				#home_trabalhos .projetos_slider .slider_menu input[type='range']::-webkit-slider-thumb {
+				    -webkit-appearance: none;
+				    background-color: #8dc63f;
+				    width: 17px;
+				    height: 17px;
+				    border-radius: 50%;
+				    box-shadow: 0px 0px 0px 7px #004961;
+				}
+				#home_trabalhos .projetos_slider .slider_menu input[type=range]::-moz-range-track {
+					background: red;
+					width: 4px;
+					height: 10px;	
+				}
+			</style>
+			<div id="home_trabalhos" class="">
+				<div class="trabalhos_recentes">
+					<div class="trabalhos_recentes_content">
+						<h2>Trabalhos recentes</h2>
+						<div class="mais_trabalhos">
+							<div class="bt_padrao1">
+								<a href=#>
+									<div class="circulo">
+										<span></span>
+									</div>
+									<div class="mensagem">
+										<p>Notícias</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="bt_esconder">
+						<a href="#">esconder</a>
+					</div>
+				</div>
+				<style>
+					#home_trabalhos .projetos_slider .slider_menu ul {
+						list-style: none;
+						width: 100%;
+						display: table;
+					    table-layout: fixed;
+					    overflow: hidden;
+					    padding: 0;
+					} 
+					#home_trabalhos .projetos_slider .slider_menu ul li {
+						display: table-cell;
+						
+					}
+					#home_trabalhos .projetos_slider .slider_menu ul li a{
+						background: #004961;
+						width: 7px;
+						height: 7px;
+						border-radius: 50%;
+						text-indent: 9999;
+						cursor: pointer;
+						display: block;
+						-webkit-transition: all 0.4s ease-in-out 0.2s;
+						position: absolute;
+						top: 50%;
+					}
+					#home_trabalhos .projetos_slider .slider_menu ul li .ativo{
+						background-color: #8dc63f;
+					    width: 17px;
+					    height: 17px;
+					    border-radius: 50%;
+					    box-shadow: 0px 0px 0px 7px #004961;
+					    position: absolute;
+					    -webkit-transition: all 0.4s ease-in-out 0.2s;
+				   		top: 39%;
+				   }
+				   
+				   #home_trabalhos .projetos_slider .slider_menu span {
+					   	width: 95%;
+					   	margin-left: 2.5%;
+						border-radius: 7px;
+						background: #e6e7e8;
+						display: block;
+						position: absolute;
+						top: 50%;
+						left: 0;
+						text-indent: -99999;
+						height: 6px;
+					}
+					#home_trabalhos .projetos_slider .slider_imagens {
+						position:relative;
+						overflow: hidden;
+						height: 95%;
+					}
+					#home_trabalhos .projetos_slider .slider_imagens ul {
+						list-style: none;
+						position:relative;
+						display:table;
+						width: 100%;
+						height: 100%;
+						margin: 0 0 -60px 0;
+						padding: 0 0 0px 0;
+						-webkit-transition: 0.5s left;
+					    -moz-transition: 0.5s left;
+					    -ms-transition: 0.5s left;
+					    -o-transition: 0.5s left;
+						
+					}
+					#home_trabalhos .projetos_slider .slider_imagens ul li {
+						/*position: relative;
+						display:block;
+						width: 100%;
+						height: 100%;
+						float:left;
+						text-align: center;*/
+						position: relative;
+						display: table-cell;
+						width: 90%;
+						height: 100%;
+						text-align: center;
+					}
+					#home_trabalhos .projetos_slider .slider_imagens ul li .descricao_item {
+						position: absolute;
+						top: 25%;
+						right: 15%;
+						width: 220px;
+						text-align: left;
+						opacity: 1;
+						-webkit-transition: all 0.2s ease-in-out 0.2s;
+						-moz-transition: all 0.2s ease-in-out 0.2s;
+						-o-transition: all 0.2s ease-in-out 0.2s;
+						-ms-transition: all 0.2s ease-in-out 0.2s;
+						transition: all 0.2s ease-in-out 0.2s;
+					}
+					#home_trabalhos .projetos_slider .slider_imagens ul li .descricao_item h2 {
+						font: normal 36pt/1.2em 'nexa_bold', Tahoma;
+						color: #fff
+					}
+					#home_trabalhos .projetos_slider .slider_imagens ul li .descricao_item h4 {
+						font: normal 14pt/1em 'nexa_light', Tahoma;
+						color: #fff
+					}
+					#home_trabalhos .projetos_slider .slider_imagens ul li > img{
+						width: 890px;
+						height: 100%;	
+						-webkit-transition: all 0.5s ease-in-out 0.2s;
+						-moz-transition: all 0.5s ease-in-out 0.2s;
+						-o-transition: all 0.5s ease-in-out 0.2s;
+						-ms-transition: all 0.5s ease-in-out 0.2s;
+						transition: all 0.5s ease-in-out 0.2s;
+					}
+					#home_trabalhos .projetos_slider .slider_imagens ul li:hover span {
+						opacity: 1;
+					}
+					#home_trabalhos .projetos_slider .slider_imagens ul li:hover > .descricao_item {
+						opacity: 0;
+					} 
+					#home_trabalhos .projetos_slider .slider_imagens ul li:hover > img {
+						-webkit-transform: scale(1.5);
+						margin-left: 25%;
+						-webkit-filter: blur(3.3px);
+						-moz-filter: blur(3.3px);
+					  	-o-filter: blur(3.3px);
+					  	-ms-filter: blur(3.3px);
+					  	filter: blur(3.3px);
+					  	filter: url(blur.svg#blur);
+						filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+					}
+					
+					#home_trabalhos .projetos_slider .slider_imagens ul li span{
+						width: 100%;
+						height: 100%;
+						background: rgba(0,0,0,0.3);
+						position: absolute;
+						top: 0;
+						left: 0;
+						opacity: 0;
+						-webkit-transition: all 0.2s ease-in-out 0.2s;
+						-moz-transition: all 0.2s ease-in-out 0.2s;
+						-o-transition: all 0.2s ease-in-out 0.2s;
+						-ms-transition: all 0.2s ease-in-out 0.2s;
+						transition: all 0.2s ease-in-out 0.2s;
+					}
+					#home_trabalhos .projetos_slider .slider_imagens ul li span p {
+						position: relative;
+						top: 50%;
+					}
+				</style>
+				<div class="projetos_slider">
+					<div class="slider_imagens">
+						<ul>
+							<li>
+								<img src="images/trabalho_1a.png" class="imagem_slide" />
+								<div class="descricao_item">
+									<h2>Dia dos namorados imobiliária Giaretta</h2>
+									<h4>Impresso | campanha</h4>
+								</div>
+								<a href=#><span><p><img src="images/ver_projeto.png"/></p></span></a>
+							</li>
+							<li>
+								<img src="images/trabalho_2a.png" />
+								
+								<a href=#><span><p><img src="images/ver_projeto.png"/></p></span></a>
+							</li>
+							<li>
+								<img src="images/trabalho_1a.png" />
+								<a href=#><span><p><img src="images/ver_projeto.png"/></p></span></a>
+							</li>
+							<li>
+								<img src="images/trabalho_2a.png" />
+								<a href=#><span><p><img src="images/ver_projeto.png"/></p></span></a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="slider_menu">
+						<input type="range" name="points" min="1" max="1000" value="1" list="mark">
+							<datalist id="mark">
+							  	<option>250</option>
+							  	<option>500</option> 
+							    <option>750</option> 
+							  	<option>950</option> 
+							</datalist>
+					<!--<span>fundo</span>
+						<ul>
+							<li><a class="ativo" href="#1">1</a></li>
+							<li><a href="#1">2</a></li>
+							<li><a href="#1">3</a></li>
+							<li><a href="#1">4</a></li>
+							<li><a href="#1">5</a></li>
+						</ul>
+						-->
+					</div>
+				</div>
+			</div>
+			<div id="intervalo2" class="intervalo">
+			</div>
+			<style> 
+				#home_comotrabalhamos .botao {
+					background: #8dc63f;
+					display: inline-block;
+					padding: 5 0px 2px 0;
+					margin: 15px 0;
+					border: 1px solid #fff;
+				}
+				#home_comotrabalhamos .botao span {
+					background: #fff;
+					width: 15px;
+					height: 15px;
+					border-radius: 50%;
+					text-indent: -9999;
+					display: inline-block;
+				}
+				#home_comotrabalhamos .botao span:first-child {
+					margin: 5px 15px 0 10px;
+				}
+				#home_comotrabalhamos .botao p {
+					display: inline-block;
+					text-transform: uppercase;
+					padding: 0;
+					font: normal 13pt/1.5em "din_medium", Tahoma;
+				}
+				#home_comotrabalhamos .botao span:last-child {
+					margin: 0 10px 0 15px;
+					
+				}
+			</style>
+			<div id="home_comotrabalhamos" class="">
+				<div class="trabalhamos_1">
+					<div class="inner">
+						<h3>Como trabalhamos?</h3>
+						<p>Aliados aos objetivos de nossos clientes,
+							 unimos três grandes especialidades na realização de nossos serviços.</p>
+						<div class="botao">
+							<a href=#>
+								<span>0</span>
+								<p>Saiba mais</p>
+								<span>0</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<style>
+					/*#home_comotrabalhamos .fundo {
+						height: 170px;
+						position: absolute;
+						width: 180px;
+						margin: 150px 240px;
+					}
+					*/
+					
+					#home_comotrabalhamos > .trabalhamos_3 .hover {
+						background: #fff;
+					}
+					#home_comotrabalhamos > .trabalhamos_4 .hover {
+						background: #fdba31;
+					}
+					#home_comotrabalhamos .tb-info .tb-info-back .voltar {
+						display: none;	
+					}
+					@media only screen and (min-width: 1024px){
+						#home_comotrabalhamos .fundo:hover .normal{
+							-webkit-transform: scale(0);
+							-moz-transform: scale(0);
+							-o-transform: scale(0);
+							-ms-transform: scale(0);
+							transform: scale(0);
+							opacity: 0;
+						}
+						#home_comotrabalhamos .fundo:hover .hover {
+							-webkit-transform: scale(1);
+							-moz-transform: scale(1);
+							-o-transform: scale(1);
+							-ms-transform: scale(1);
+							transform: scale(1);
+							opacity: 1;
+							margin: -290px -15%;
+						}
+						#home_comotrabalhamos .fundo .hover {
+							margin: -250 -15%;
+							display: block;
+							/*position: absolute;*/
+							/*margin: -130px -110px;*/
+							opacity: 0;
+							-webkit-transform: scale(0.5);
+							-moz-transform: scale(0.5);
+							-o-transform: scale(0.5);
+							-ms-transform: scale(0.5);
+							-webkit-transition: all 0.4s ease-in-out 0.2s;
+							-moz-transition: all 0.4s ease-in-out 0.2s;
+							-o-transition: all 0.4s ease-in-out 0.2s;
+							-ms-transition: all 0.4s ease-in-out 0.2s;
+							transition: all 0.4s ease-in-out 0.2s;
+						}
+						.tb-item:hover .tb-info-front {
+					   	 	-webkit-transform: scale(0);
+							-moz-transform: scale(0);
+							-o-transform: scale(0);
+							-ms-transform: scale(0);
+					    	opacity: 0;
+						} 
+						.tb-item:hover .tb-info-back {
+						    -webkit-transform: scale(2);
+							-moz-transform: scale(2);
+							-o-transform: scale(2);
+							-ms-transform: scale(2);
+						    opacity: 1;
+						    pointer-events: auto;
+						}
+					}
+					
+					
+					.tb-item {
+						width: auto;
+						height: auto;
+					    border-radius: 50%;
+					    position: relative;
+					    cursor: default;
+					    margin: 15% 40%;
+					}
+					.tb-info-wrap, 
+					.tb-info{
+					    position: absolute;
+					    width: 180px;
+					    height: 180px;
+					    border-radius: 50%;
+					}
+					.tb-info-wrap {
+					    top: 20px;
+					    left: 20px;
+					}
+					.tb-info > div {
+					    display: block;
+					    position: absolute;
+					    width: 100%;
+					    height: 100%;
+					    border-radius: 50%;
+					    background-position: center center;
+					}
+					.tb-info .tb-info-front {
+					    transition: all 0.6s ease-in-out;
+					}
+					.tb-info .tb-info-back {
+					    opacity: 0;
+					    background: #FFFFFF;
+					    
+					    -webkit-transform: scale(3.0);
+					    -moz-transform: scale(3);
+						-o-transform: scale(3);
+						-ms-transform: scale(3);
+					    -webkit-transition: all 0.4s ease-in-out 0.2s;
+						-moz-transition: all 0.4s ease-in-out 0.2s;
+						-o-transition: all 0.4s ease-in-out 0.2s;
+						-ms-transition: all 0.4s ease-in-out 0.2s;
+						transition: all 0.4s ease-in-out 0.2s;
+					}
+					.tb-info .tb-info-back .titulo h4{
+						display: inline-block;
+						border-bottom: 1px solid #336d81;
+						text-transform: uppercase;
+						margin-top: 20px;
+						display: inline-block;
+						margin-top: 20%;
+						color: #336d81;
+						font: normal 8pt/1em "nexa_bold", Tahoma;
+						text-transform: uppercase;
+					}
+					.tb-info .tb-info-back .texto {
+						display: block;
+						width: 70%;
+						text-align: center;
+						margin: 20px 15% 0 15%;
+						font: normal 8pt/1.3em "droid_serif", Tahoma;
+						color: #004961;
+					}
+					
+					@media only screen and (min-width: 481px) and (max-width: 1024px) {  
+						
+						#home_trabalhos {
+							height: 1000px;
+						}
+						
+						#home_trabalhos .trabalhos_recentes {
+							position: relative;
+						}
+						#home_trabalhos .bt_padrao1 .mensagem {
+							width: 107px;	
+						}
+						#home_trabalhos .bt_padrao1 .mensagem p{
+							text-indent: 0;
+							color: #fdba31;
+						}						
+						#home_comotrabalhamos > .trabalhamos_4 .tb-info .tb-info-back {
+							background:transparent;							
+						}
+						#home_comotrabalhamos > .trabalhamos_4 .tb-info .tb-info-back .texto {
+							color: #336d81;
+						}
+						#home_comotrabalhamos > .trabalhamos_4 .tb-info .tb-info-back .voltar {
+							background: #fff;
+							border-color: #336d81;
+						}
+						#home_comotrabalhamos .tb-item {
+							margin: 50% auto;
+						}
+						#home_comotrabalhamos .tb-info-wrap {
+							left: 40px;
+						}
+						#home_comotrabalhamos .tb-info .tb-info-back {
+							-webkit-transform: scale(1.0);
+							background: transparent;
+							color: #fff;
+							border-radius: 0;
+							margin-top: -100;
+						}
+						#home_comotrabalhamos .tb-info .tb-info-back .titulo h4 {
+							color: #336d81;
+							font: normal 16pt/1em "nexa_bold", Tahoma;
+						}
+						#home_comotrabalhamos .tb-info .tb-info-back .texto {
+							width: 100%;
+							margin: 20px 0 0 0;
+							font: normal 16pt/1.3em "droid_serif", Tahoma;
+							color: #fff;
+						}
+						
+						#home_comotrabalhamos .tb-info .tb-info-back .voltar {
+							display:block;
+							position: absolute;
+							left: -30px;
+							bottom: -230px;
+							background: #fdba31;
+							width: 55px;
+							height: 55px;
+							display: inline-block;
+							border-radius: 100%;
+							border: 6px solid #fff;
+							cursor: pointer;						
+						}
+						#home_comotrabalhamos .tb-info .tb-info-back .voltar img {
+							margin: 25% 25% 25% 20%;
+							cursor: pointer;
+							-webkit-transform: rotate(90deg);
+							-moz-transform: rotate(90deg);
+							-ms-transform: rotate(90deg);
+							-o-transform: rotate(90deg);
+							transform: rotate(90deg);
+						}
+						
+						
+						#home_rodape .midias_sociais .ch-grid li {
+							width: 120px;
+							height: 120px;
+							margin: 10px;
+						}
+						#home_rodape .midias_sociais .ch-info p {
+							margin-top: 40px;
+							margin-left: 10%;
+						}
+					}
+					
+					/*iphone
+					@media only screen and (max-width: 362px) {*/
+					@media screen and (max-device-width: 360px) , (max-width: 382px){
+												
+						 
+					}
+					
+					
+					
+					
+				</style>
+				<div class="trabalhamos_2">
+					<div class="tb-item">
+						<div class="tb-info-wrap">
+							<div class="tb-info">
+								<div class="tb-info-front">
+									<span class="circulo">
+										<h3>1</h3>
+									</span>
+									<span class="texto">
+										<h4>Propaganda</h4>
+									</span>	
+								</div>
+								<div class="tb-info-back">
+									<span class="titulo">
+										<h4>Propaganda</h4>
+									</span>
+									<span class="texto">
+										<p>Utilizada para divulgar valores de um marca, a propaganda é capaz 
+											de mudar comportamentos e transformar culturas. </p>
+									</span>
+									<span class="voltar">
+									  <img src="images/home_seta.png"/>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="trabalhamos_3">
+					<div class="tb-item">
+						<div class="tb-info-wrap">
+							<div class="tb-info">
+								<div class="tb-info-front">
+									<span class="circulo">
+										<h3>2</h3>
+									</span>
+									<span class="texto">
+										<h4>Design gráfico</h4>
+									</span>	
+								</div>
+								<div class="tb-info-back">
+									<span class="titulo">
+										<h4>Design gráfico</h4>
+									</span>
+									<span class="texto">
+										<p>Especialidade utilizada na realização de realizar projetos de 
+									identidades visuais, editoriais, sinalização, infografia e PDV. </p>
+									</span>
+									<span class="voltar">
+									  <img src="images/home_seta.png"/>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="trabalhamos_4">
+					<div class="tb-item">
+						<div class="tb-info-wrap">
+							<div class="tb-info">
+								<div class="tb-info-front">
+									<span class="circulo">
+										<h3>3</h3>
+									</span>
+									<span class="texto">
+										<h4>Marketing digital</h4>
+									</span>	
+								</div>
+								<div class="tb-info-back">
+									<span class="titulo">
+										<h4>Marketing digital</h4>
+									</span>
+									<span class="texto">
+										<p>Estratégias e ações específicas para meios digitais 
+									que se integram à construção de marcas. </p>
+									</span>
+									<span class="voltar">
+									  <img src="images/home_seta.png"/>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+					<!--<div class="fundo">
+						<div class="normal">
+							<span class="circulo">
+								<h3>1</h3>
+							</span>
+							<span class="texto">
+								<h4>Propaganda</h4>
+							</span>	
+						</div>
+						<div class="hover">
+							<span class="titulo">
+								<h4>Propaganda</h4>
+							</span>
+							<span class="texto">
+								<p>Utilizada para divulgar valores de um marca, a propaganda é capaz 
+									de mudar comportamentos e transformar culturas. </p>
+							</span>
+							<span class="voltar">
+							  <img src="images/home_seta.png"/>
+							</span>
+						</div>
+					</div>	
+				</div>
+				<div class="trabalhamos_3">
+					<div class="fundo">
+						<div class="normal">
+							<span class="circulo">
+								<h3>2</h3>
+							</span>
+							<span class="texto">
+								<h4>Design gráfico</h4>
+							</span>
+						</div>
+						<div class="hover">
+							<span class="titulo">
+								<h4>Design gráfico</h4>
+							</span>
+							<span class="texto">
+								<p>Especialidade utilizada na realização de realizar projetos de 
+									identidades visuais, editoriais, sinalização, infografia e PDV. </p>
+							</span>
+							<span class="voltar">
+							  <img src="images/home_seta.png"/>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="trabalhamos_4">
+					<div class="fundo">
+						<div class="normal">
+							<span class="circulo">
+								<h3>3</h3>
+							</span>
+							<span class="texto">
+								<h4>Marketing digital</h4>
+							</span>
+						</div>
+						<div class="hover">
+							<span class="titulo">
+								<h4>Marketing digital</h4>
+							</span>
+							<span class="texto">
+								<p>Estratégias e ações específicas para meios digitais 
+									que se integram à construção de marcas. </p>
+							</span>
+							<span class="voltar">
+							  <img src="images/home_seta.png"/>
+							</span>
+						</div>
+					</div>
+				</div>-->			
+			</div>
+			<div id="intervalo3" class="intervalo">
+			</div>
+			
+			<div id="home_noticias" class="wrapper">
+				<div class="noticias">
+					<h1>Fique por dentro do que temos feito</h1>
+					
+					<div class="item_noticia">
+						<hr class="linha_verde"/>
+						<h5>01 jan</h5>
+						<p>Proiz desenvolve campanha para lançamento da nova identidade visual de uma das mais antigas e tradicionais imobiliárias do oeste paranaense.</p>
+					</div>
+					<div class="item_noticia">
+						<hr class="linha_verde"/>
+						<h5>01 jan</h5>
+						<p>Proiz desenvolve campanha para lançamento da nova identidade visual de uma das mais antigas e tradicionais imobiliárias do oeste paranaense.</p>
+					</div>
+					<div class="item_noticia">
+						<hr class="linha_verde"/>
+						<h5>01 jan</h5>
+						<p>Proiz desenvolve campanha para lançamento da nova identidade visual de uma das mais antigas e tradicionais imobiliárias do oeste paranaense.</p>
+					</div>
+				
+				<div class="bt_padrao1">
+					<a href=#>
+						<div class="circulo">
+							<span></span>
+						</div>
+						<div class="mensagem">
+							<p>Notícias</p>
+						</div>
+					</a>
+				</div>
+				
+				
+				</div>
+				
+			</div>
+		<div id="intervalo4" class="intervalo">
+		</div>	
+		</div>
+		
+		<div id="home_rodape">
+			<div class="midias_sociais">
+					<div class="mensagem" style="opacity: 1">
+						<h4>Para quem não gosta de ficar sabendo por último</h4>
+						<p>Conecte-se à Proiz através das mídias sociais</p>
+					</div>
+					<style>
+						.ch-grid {
+							margin: 20px 0 0 0;
+							padding:0;
+							list-style: none;
+							display: block;
+							text-align: center;
+							width: 100%;
+						}
+						.ch-grid:after,
+						.ch-item:before {
+							content: '';
+							display: table;
+						}
+						.ch-grid:after {
+						    clear: both;
+						}
+						 
+						.ch-grid li {
+						    width: 150px;
+						    height: 150px;
+						    display: inline-block;
+						    margin: 20px;
+						}
+						
+						.ch-item {
+							width: 100%;
+							height: 100%;
+							border-radius: 50%;
+							position: relative;
+						    cursor: pointer;
+						    -webkit-perspective: 900px;
+							-moz-perspective: 900px;
+							-o-perspective: 900px;
+							-ms-perspective: 900px;
+						}
+						.ch-info {
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							-webkit-transform-style: preserve-3d;
+							-moz-transform-style: preserve-3d;
+							-o-transform-style: preserve-3d;
+							-ms-transform-style: preserve-3d;
+							transform-style: preserve-3d;
+						}
+						.ch-info {
+							opacity: 0;
+						}
+						.ch-info > div {
+							display: block;
+							position: absolute;
+							border: 6px solid #004961;
+							box-shadow: inset 0 0 0 10px #fdba31;
+							width: 100%;
+							height: 100%;
+							border-radius: 50%;
+							background-position: center center;
+							-webkit-transition: all 0.4s linear;
+							-moz-transition: all 0.4s linear;
+							-o-transition: all 0.4s linear;
+							-ms-transition: all 0.4s linear;
+							transition: all 0.4s linear;
+							
+							transform-origin: 50% 0%;
+							-webkit-transform-origin: 50% 0%;
+							-moz-transform-origin: 50% 0%;
+							-o-transform-origin: 50% 0%;
+							-ms-transform-origin: 50% 0%;
+						}
+						.ch-info .ch-info-front {
+						    /*box-shadow: inset 0 0 0 16px rgba(0,0,0,0.3);*/
+						}
+						.ch-info .ch-info-back {
+							background: #004961;
+							opacity: 0;
+							transform: translate3d(0,0, -150px) rotate3d(1,0,0,90deg);
+							-webkit-transform: translate3d(0,0, -150px) rotate3d(1,0,0,90deg);
+							-moz-transform: translate3d(0,0, -150px) rotate3d(1,0,0,90deg);
+							-o-transform: translate3d(0,0, -150px) rotate3d(1,0,0,90deg);
+							-ms-transform: translate3d(0,0, -150px) rotate3d(1,0,0,90deg);
+						}
+						.ch-img-1 {
+							background: #cd9929 url('images/bt_face.png') no-repeat center center;
+						}
+						.ch-info p {
+						    font: normal 16px/1.5em "nexa_bold",Tahoma;
+							color: #fff;
+							text-align: center;
+							margin-top: 50px;
+							width: 95px;
+							margin-left: 19%;
+						}
+						.ch-info p a:hover {
+						    color: rgba(255,242,34, 0.8);
+						}
+						.ch-item:hover .ch-info-front {
+							transform: translate3d(0,230px,0) rotate3d(1,0,0,-90deg);
+							-webkit-transform: translate3d(0,230px,0) rotate3d(1,0,0,-90deg);
+							-moz-transform: translate3d(0,230px,0) rotate3d(1,0,0,-90deg);
+							-o-transform: translate3d(0,230px,0) rotate3d(1,0,0,-90deg);
+							-ms-transform: translate3d(0,230px,0) rotate3d(1,0,0,-90deg);
+							opacity: 0;
+						}
+						.ch-item:hover .ch-info-back {
+							transform: rotate3d(1,0,0,0deg);
+							-webkit-transform: rotate3d(1,0,0,0deg);
+							-moz-transform: rotate3d(1,0,0,0deg);
+							-o-transform: rotate3d(1,0,0,0deg);
+							-ms-transform: rotate3d(1,0,0,0deg);
+							opacity:1;
+						}
+					</style>
+					<ul class="ch-grid">
+						<li class="ch-item">
+							<div class="ch-info">
+								<div class="ch-info-front ch-img-1"></div>
+								<div class="ch-info-back">
+									<p>Siga-nos no facebook</p>
+								</div>
+							</div>
+						</li>
+						<li class="ch-item">
+							<div class="ch-info">
+								<div class="ch-info-front ch-img-1"></div>
+								<div class="ch-info-back">
+									<p>Siga-nos no twitter</p>
+								</div>
+							</div>
+						</li>
+						<li class="ch-item">
+							<div class="ch-info">
+								<div class="ch-info-front ch-img-1"></div>
+								<div class="ch-info-back">
+									<p>Siga-nos no google</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!--<div class="midias">
+						<div class="facebook">
+							<a href="#">
+							<div class="inner_midia">
+								<p>Siga-nos no facebook</p>
+							</div>
+							</a>
+						</div>
+						<div class="google">
+							<a href="#">
+							<div class="inner_midia">
+								<p>Siga-nos no google</p>
+							</div>
+							</a>
+						</div>
+						<div class="instagram">
+							<a href="#">
+							<div class="inner_midia">
+								<p>Siga-nos no instagram</p>
+							</div>
+							</a>
+						</div>
+					</div>!-->
+			</div>
+			<div class="newsletter">
+				<h4>Insira seu e-mail para receber atualizações</h4>
+				<form action="#">
+					<input type="text" placeholder="digitando..." value="" size="30" />
+					<div class="bt_enviar">
+						<input type="submit" value="Enviar" />
+					</div>
+				</form>
+			</div>
+			<div class="rodape">
+				<div class="mensagem_wrapper">
+					<div class="mensagem">
+						<img src="images/logo_proiz_branco.png">
+						<p>Agência de comunicação integrada. Publicidade e propaganda, 
+							design gráfico e marketing digital. Soluções completas para a 
+							construção de marcas fortes.</p>
+					</div>
+				</div>
+				<div class="endereco">
+					<h3>+55 (45) 3378-3676</h3>
+					<h5>Rua Guarani, 2216.</h5>
+					<h5>Jardim La Salle.</h5>
+					<h5>Toledo - Paraná</h5>
+				</div>
+				
+			</div>
+			<footer>
+				<p>Proiz comunicação integrada - Todos os direitos reservados.</p>
+			</footer>
+		</div>	
+		
+	</body>
+		
+	</html>

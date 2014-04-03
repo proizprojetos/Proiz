@@ -1,0 +1,484 @@
+	<html  lang="pt-br">
+		<meta charset="UTF-8">
+		<head>
+			<title>Proiz - Trabalhos</title>
+			<link type="text/css" rel="stylesheet" href="css/styles.css">
+			<link type="text/css" rel="stylesheet" href="css/styles-responsive.css">
+			
+			<script src="js/jquery.1.10.2.js" type="text/javascript"></script>
+			
+			<!-- Esse js cria os efeitos nos textos, e movimentação, mais em  http://johnpolacek.github.io/scrollorama/-->
+			<script src="js/jquery.scrollorama.js" type="text/javascript"></script>
+			<!-- Esse js da o efeito de scroll suave ao navegar pela pagina -->
+			<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+			
+			<!-- Esse js da faz a verificação se um elemento esta visivel ou nao na tela --> 
+			<script src="js/jquery.visible.min.js" type="text/javascript"></script>
+			
+			<!-- Essa é o arquivo de efeitos padrão -->
+			<script src="js/main.js" type="text/javascript"></script>
+			<script src="js/grid/masonry.pkgd.min.js" type="text/javascript"></script>
+			<script src="js/grid/imagesloaded.pkgd.js" type="text/javascript"></script>
+			<script src="js/grid/efeito_grid.js" type="text/javascript"></script>
+			
+			<!-- Chama o efeito para montar o grid
+			<script src="js/grid/masonry.pkgd.min.js" type="text/javascript"></script>
+			<script src="js/grid/imagesloaded.js"type="text/javascript"></script>
+			<script src="js/grid/modernizr.custom.js"type="text/javascript"></script>
+			<script src="js/grid/classie.js"type="text/javascript"></script>			
+			<script src="js/grid/animOnScroll.js" type="text/javascript"></script> -->
+			
+		</head>
+	<body class="corpo">
+		
+		<div id="header">
+			<div id="logo">
+				<img src="images/logo_proiz.png" />
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html">QUEM SOMOS</a></li>
+					<li><a href="#especialidades">ESPECIALIDADES</a></li>
+					<li><a href="trabalhos.html">TRABALHOS</a></li>
+					<li><a href="#noticias">NOTÍCIAS</a></li>
+					<li><a href="#contato">CONTATO</a></li>
+				</ul>
+			</div>
+			<div id="redes">
+				
+			</div>
+		</div>
+		<style>
+				
+		</style>
+		<div id="content">
+			<div id="trabalhos">
+				<div class="titulo">
+					<h1>Trabalhos<span>/Em mídias sociais</span></h1>
+					<br/><br/>
+					<!--<h5>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat aliquam urna, porta posuere elit. 
+						Vestibulum congue volutpat dui, sed venenatis sem aliquet ac. Vestibulum facilisis fringilla elit sit amet rhoncus. 
+						Maecenas rhoncus condimentum scelerisque. Nullam ac rhoncus massa, ac lacinia elit. Nullam magna nunc, bibendum ut 
+						odio eu, ultrices feugiat justo. Duis at pellentesque orci, vitae venenatis dui. Fusce eros ante, dic
+					</h5>-->
+				</div>
+				<br/><br/>
+				<style>
+					
+					
+				</style>
+				<script>
+				$(document).ready(function() {
+					$('#trabalhos .menu_trabalhos li:first-child > a').addClass('ativo');
+					$('#trabalhos .menu_trabalhos a').click(function(e) {
+						e.preventDefault();
+						$('#trabalhos .menu_trabalhos a').removeClass('ativo');
+						$(this).addClass('ativo');
+					});
+				});
+				</script>
+				<div class="menu_trabalhos">
+					<ul>
+						<li><a href="#">Todos</a></li>
+						<li><a href="#">Design</a></li>
+						<li><a href="#">Impressos</a></li>
+						<li><a href="#">Web</a></li>					
+					</ul>
+				</div>
+				<style>
+					.corpo_trabalhos {
+						padding: 100px 30px;
+						margin: 0 auto;
+						min-height: 1500px;
+					}
+					#grid {
+						position: absolute;
+						/*min-height: 1300px;*/
+					}
+					#trabalhos .corpo_trabalhos .item {
+						/*height: 260px;*/
+						width: 19%;
+						/*float: left;*/
+						margin: 5px;
+					
+						-webkit-perspective: 1300px;
+						-moz-perspective: 1300px;
+						-o-perspective: 1300px;
+						-ms-perspective: 1300px;
+						opacity: 0;
+						-webkit-transition: all 0.2s linear;
+						-moz-transition: all 0.4s linear;
+						-o-transition: all 0.4s linear;
+						-ms-transition: all 0.4s linear;
+						transition: all 0.2s linear;
+					
+						-webkit-transform-style: preserve-3d;
+						-moz-transform-style: preserve-3d;
+						-o-transform-style: preserve-3d;
+						-ms-transform-style: preserve-3d;
+						transform-style: preserve-3d;	
+					}
+					#trabalhos .corpo_trabalhos .tam1 {
+						height: auto;
+						background: blue;
+					}
+					#trabalhos .corpo_trabalhos .tam2 {
+						height: 400px;
+						background: red;
+					}
+					#trabalhos .corpo_trabalhos .tam2 img{
+						height: 100% !important;	
+					}
+					#trabalhos .corpo_trabalhos .item img{
+						height: auto;	
+					}
+					.corpo_trabalhos .item.animate {
+						transform: translateZ(400px) translateY(300px) rotateX(0deg);
+						-webkit-transform: translateZ(-400px) translateY(-200px) rotateX(90deg);
+						-moz-transform: translateZ(-400px) translateY(-200px) rotateX(0deg);
+						-o-transform: translateZ(-400px) translateY(-200px) rotateX(0deg);
+						-ms-transform: translateZ(-400px) translateY(-200px) rotateX(0deg);
+						
+						-webkit-animation: fallPerspective .8s ease-in-out forwards;
+						animation: fallPerspective .8s ease-in-out forwards;
+					}
+					@-webkit-keyframes fallPerspective {
+					    100% { 
+						    	transform: translateZ(0px) translateY(0px) rotateX(0deg); 
+								-webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg);
+								-moz-transform: translateZ(0px) translateY(0px) rotateX(0deg);
+								-o-transform: translateZ(0px) translateY(0px) rotateX(0deg);
+								-ms-transform: translateZ(0px) translateY(0px) rotateX(0deg);
+						    	opacity: 1; 
+					    	
+					    	}
+					}
+					@keyframes fallPerspective {
+					    100% { transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
+					}
+					
+					
+					@media only screen and (min-width: 725px) and (max-width: 1024px) { 
+						.corpo_trabalhos {
+							padding: 100px 10px;
+						}
+						#trabalhos .corpo_trabalhos .item {
+							width: 24%;
+							margin: 2px;
+						}
+						#trabalhos .corpo_trabalhos .tam2 {
+							height: 250px;	
+						}
+					}
+					@media only screen and (min-width: 481px) and (max-width: 724px) {
+						.corpo_trabalhos {
+							padding: 100px 10px;
+						}
+						#trabalhos .corpo_trabalhos .item {
+							width: 32%;
+							margin: 2px;
+						}	
+						#trabalhos .corpo_trabalhos .tam2 {
+							height: 200px;	
+						}
+						
+					}
+					@media screen and (max-device-width: 360px) , (max-width: 480px){
+						.corpo_trabalhos {
+							padding: 100px 5px;
+						}
+						#trabalhos .corpo_trabalhos .item {
+							width: 48%;
+							margin: 2px;
+						}	
+					}
+					
+				</style>
+				<script>
+					$(document).ready(function() {
+						/*new AnimOnScroll( document.getElementById( 'grid' ), {
+							minDuration : 0.4,
+							maxDuration : 0.7,
+							viewportFactor : 0.2
+						} );*/
+						/*var $container = $('#grid');
+						$container.masonry({
+							itemSelector: '.item'
+						});
+						$container.masonry('bindResize');	
+						*/
+						/*window.addEventListener('resize', function() {
+							console.log('chamou');
+							$container.masonry({
+							itemSelector: '.item'
+						});
+						},false);*/
+						new AnimOnScroll(document.getElementById('grid'), {
+							minDuration :0.4,
+							maxDuration : 1,
+							viewportFactor : 0.5
+						});
+						
+						/*$('.item').click(function() {
+							//alert(getOffset((this)).top);
+							//alert((this).offsetWidth);
+							alert(inViewport(this, 1));
+						});
+						*/
+					});
+		
+				</script>
+				<div class="corpo_trabalhos">
+					<!--<ul class="grid item effect-4" id="grid">
+						<li><a href="http://drbl.in/fWMM"><img src="images/1.jpg"></a></li>
+					    <li><a href="http://drbl.in/fWPV"><img src="images/2.jpg"></a></li>
+					    <li><a href="http://drbl.in/fWMT"><img src="images/3.jpg"></a></li>
+					    <li><a href="http://drbl.in/fQdt"><img src="images/4.jpg"></a></li>
+					</ul>-->
+					<div id="grid">
+						<div class="item tam1">
+							<img src="images/trabalho_1.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam2">
+							<img src="images/trabalho_2.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam1">
+							<img src="images/trabalho_3.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam1">
+							<img src="images/trabalho_1.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam1">
+							<img src="images/trabalho_1.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam2">
+							<img src="images/trabalho_2.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam1">
+							<img src="images/trabalho_3.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam1">
+							<img src="images/trabalho_1.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div><div class="item tam1">
+							<img src="images/trabalho_1.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam2">
+							<img src="images/trabalho_2.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam1">
+							<img src="images/trabalho_3.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam1">
+							<img src="images/trabalho_1.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div><div class="item tam1">
+							<img src="images/trabalho_1.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam2">
+							<img src="images/trabalho_2.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam1">
+							<img src="images/trabalho_3.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+						<div class="item tam1">
+							<img src="images/trabalho_1.png" />
+							<div class="hover">
+								<h4>Leve descrição do trabalho</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<style>
+					
+					
+				</style>
+				<div class="compartilhar">
+					<h3>Gostou?</h3>
+					<h4>Compartilhe essa página com seus amigos</h4>
+					
+					<div class="botoes_amarelos">
+						<div class="bt_facebook">
+							<a href="face">Facebook</a>
+						</div>
+						<div class="bt_google">
+							<a href="google">Facebook</a>
+						</div>
+						<div class="bt_instagram">
+							<a href="#">Facebook</a>
+						</div>
+						<div class="bt_twitter">
+							<a href="#">Facebook</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div id="intervalo4" class="intervalo">
+		</div>	
+		</div>
+		
+		<div id="home_rodape">
+			<div class="midias_sociais">
+					<div class="mensagem" style="opacity: 1">
+						<h4>Para quem não gosta de ficar sabendo por último</h4>
+						<p>Conecte-se à Proiz através das mídias sociais</p>
+					</div>
+					<style>
+						.ch-grid {
+							margin: 20px 0 0 0;
+							padding:0;
+							list-style: none;
+							display: block;
+							text-align: center;
+							width: 100%;
+						}
+						.ch-grid:after,
+						.ch-item:before {
+							content: '';
+							display: table;
+						}
+						.ch-grid:after {
+						    clear: both;
+						}
+						 
+						.ch-grid li {
+						    width: 150px;
+						    height: 150px;
+						    display: inline-block;
+						    margin: 20px;
+						}
+						
+						.ch-item {
+							width: 100%;
+							height: 100%;
+							border-radius: 50%;
+							position: relative;
+						    cursor: pointer;
+						    -webkit-perspective: 900px;
+							-moz-perspective: 900px;
+							-o-perspective: 900px;
+							-ms-perspective: 900px;
+						}
+						.ch-info {
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							-webkit-transform-style: preserve-3d;
+							-moz-transform-style: preserve-3d;
+							-o-transform-style: preserve-3d;
+							-ms-transform-style: preserve-3d;
+							transform-style: preserve-3d;
+						}
+						.ch-info > div {
+							opacity: 0;
+							display: block;
+							position: absolute;
+							border: 6px solid #004961;
+							box-shadow: inset 0 0 0 10px #fdba31;
+							width: 100%;
+							height: 100%;
+							border-radius: 50%;
+							background-position: center center;
+							-webkit-transition: all 0.4s linear;
+							-moz-transition: all 0.4s linear;
+							-o-transition: all 0.4s linear;
+							-ms-transition: all 0.4s linear;
+							transition: all 0.4s linear;
+							
+							transform-origin: 50% 0%;
+							-webkit-transform-origin: 50% 0%;
+							-moz-transform-origin: 50% 0%;
+							-o-transform-origin: 50% 0%;
+							-ms-transform-origin: 50% 0%;
+						}
+						.ch-info .ch-info-front {
+						    /*box-shadow: inset 0 0 0 16px rgba(0,0,0,0.3);*/
+						}
+						.ch-info .ch-info-back {
+							background: #004961;
+							opacity: 0;
+							transform: translate3d(0,0, -150px) rotate3d(1,0,0,90deg);
+							-webkit-transform: translate3d(0,0, -150px) rotate3d(1,0,0,90deg);
+							-moz-transform: translate3d(0,0, -150px) rotate3d(1,0,0,90deg);
+							-o-transform: translate3d(0,0, -150px) rotate3d(1,0,0,90deg);
+							-ms-transform: translate3d(0,0, -150px) rotate3d(1,0,0,90deg);
+						}
+						.ch-img-1 {
+							background: #cd9929 url('images/bt_face.png') no-repeat center center;
+						}
+						.ch-info p {
+						    font: normal 16px/1.5em "nexa_bold",Tahoma;
+							color: #fff;
+							text-align: center;
+							margin-top: 50px;
+							width: 95px;
+							margin-left: 19%;
+						}
+						.ch-info p a:hover {
+						    color: rgba(255,242,34, 0.8);
+						}
+						.ch-item:hover .ch-info-front {
+							transform: translate3d(0,230px,0) rotate3d(1,0,0,-90deg);
+							-webkit-transform: translate3d(0,230px,0) rotate3d(1,0,0,-90deg);
+							-moz-transform: translate3d(0,230px,0) rotate3d(1,0,0,-90deg);
+							-o-transform: translate3d(0,230px,0) rotate3d(1,0,0,-90deg);
+							-ms-transform: translate3d(0,230px,0) rotate3d(1,0,0,-90deg);
+							opacity: 0;
+						}
+						.ch-item:hover .ch-info-back {
+							transform: rotate3d(1,0,0,0deg);
+							-webkit-transform: rotate3d(1,0,0,0deg);
+							-moz-transform: rotate3d(1,0,0,0deg);
+							-o-transform: rotate3d(1,0,0,0deg);
+							-ms-transform: rotate3d(1,0,0,0deg);
+							opacity:1;
+						}
+					</style>
+					<ul class="ch-grid">
+						<li class="ch-item">
+							<div class="ch-info">
+								

@@ -1,0 +1,384 @@
+	<html  lang="pt-br">
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=max-device-width, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0 " />-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<head>
+			<title>Proiz - Versão 1</title>
+			<link type="text/css" rel="stylesheet" href="css/styles.css">
+			<link type="text/css" rel="stylesheet" href="css/styles-responsive.css">
+			
+			<!-- TEMPORARIO -->
+			<link type="text/css" rel="stylesheet" href="css/inical_temp.css">
+			
+			<script src="js/jquery.1.10.2.js" type="text/javascript"></script>
+			
+			<!-- Esse js cria os efeitos nos textos, e movimentação, mais em  http://johnpolacek.github.io/scrollorama/-->
+			<script src="js/jquery.scrollorama.js" type="text/javascript"></script>
+			<!-- Esse js da o efeito de scroll suave ao navegar pela pagina -->
+			<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+			
+			<!-- Esse js da faz a verificação se um elemento esta visivel ou nao na tela -->
+			<script src="js/jquery.visible.min.js" type="text/javascript"></script>
+			
+			<!-- Essa é o arquivo de efeitos padrão -->
+			<script src="js/main.js" type="text/javascript"></script>	
+			
+			<!-- Essa é o arquivo de efeitos da pagina inicial -->
+			<script src="js/index.js" type="text/javascript"></script>	
+			
+		</head>
+	<body class="corpo">
+		<style>
+			
+		</style>
+		<div id="header">
+			<div id="logo">
+				<img src="images/logo_proiz.png" />
+			</div>
+			<div id="menu">
+            <!--	<nav class="e2">
+                	<a href="index.html" data-hover="QUEM SOMOS">QUEM SOMOS</a>
+                    <a href="#especialidades" data-hover="ESPECIALIDADES">ESPECIALIDADES</a>
+	                <a href="trabalhos.html" data-hover="TRABALHOS">TRABALHOS</a>
+                    <a href="#noticias" data-hover="NOTÍCIAS">NOTÍCIAS</a>
+                    <a href="#contato" data-hover="CONTATO">CONTATO</a>
+                </nav>-->
+				<ul>
+					<li><a href="index.html" data-hover="QUEM SOMOS">QUEM SOMOS</a></li>
+					<li><a href="#especialidades" data-hover="ESPECIALIDADES">ESPECIALIDADES</a></li>
+					<li><a href="trabalhos.html" data-hover="TRABALHOS">TRABALHOS</a></li>
+					<li><a href="#noticias" data-hover="NOTÍCIAS">NOTÍCIAS</a></li>
+					<li><a href="#contato" data-hover="CONTATO">CONTATO</a></li>
+				</ul>
+				<a href="#" id="pull">Menu</a> 
+				<div id="carregando">
+					<img src="images/carregando.png" />
+				</div>
+			</div>
+			<div id="redes">
+				
+			</div>
+		</div>
+		
+		<div id="content">
+			<div id="home_intro" class="wrapper">
+				<h1>
+					<span><p class="verde">Inovação</p><p class="cinza">,</p></span>
+					<span><p class="azul">criatividade</p></span> 
+					<span><p class="cinza">e&nbsp;</p><p class="amarelo"> transformação</p></span>
+				</h1>
+				<div class="mensagem">
+					<div class="continue">
+						<div class="circulo">
+							<img src="images/home_seta.png"/>			
+						</div>
+					</div>
+					<div class="somos">
+						<h4>
+							Somos uma agência de comunicação integrada e pensamos o Branding como uma transformação holística de marcas.
+						</h4>
+					</div>
+				</div>
+			</div>
+			<div id="intervalo1" class="intervalo">
+			</div>
+			<div id="home_trabalhos" class="">
+				<div class="trabalhos_recentes">
+					<div class="trabalhos_recentes_content">
+						<h2>Trabalhos recentes</h2>
+						<div class="mais_trabalhos">
+							<div class="bt_padrao1">
+								<a href=#>
+									<div class="circulo">
+										<span></span>
+									</div>
+									<div class="mensagem">
+										<p>Trabalhos</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="bt_esconder">
+						<a href="#">esconder</a>
+					</div>
+				</div>
+				<div class="projetos_slider">
+					<div class="slider_imagens">
+						<ul>
+							<li>
+								<img src="images/trabalho_1a.png" class="imagem_slide" />
+								<div class="descricao_item">
+									<h2>Dia dos namorados imobiliária Giaretta</h2>
+									<h4>Impresso | campanha</h4>
+								</div>
+								<a href=#><span><p><img src="images/ver_projeto.png"/></p></span></a>
+							</li>
+							<li>
+								<img src="images/trabalho_2a.png" />
+								
+								<a href=#><span><p><img src="images/ver_projeto.png"/></p></span></a>
+							</li>
+							<li>
+								<img src="images/trabalho_1a.png" />
+								<a href=#><span><p><img src="images/ver_projeto.png"/></p></span></a>
+							</li>
+							<li>
+								<img src="images/trabalho_2a.png" />
+								<a href=#><span><p><img src="images/ver_projeto.png"/></p></span></a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="slider_menu">
+						<input type="range" name="points" min="1" max="1000" value="1" list="mark">
+							<datalist id="mark">
+							  	<option>250</option>
+							  	<option>500</option> 
+							    <option>750</option> 
+							  	<option>950</option> 
+							</datalist>
+					<!--<span>fundo</span>
+						<ul>
+							<li><a class="ativo" href="#1">1</a></li>
+							<li><a href="#1">2</a></li>
+							<li><a href="#1">3</a></li>
+							<li><a href="#1">4</a></li>
+							<li><a href="#1">5</a></li>
+						</ul>
+						-->
+					</div>
+				</div>
+			</div>
+			<div id="intervalo2" class="intervalo">
+			</div>
+			<div id="home_comotrabalhamos" class="">
+				<div class="trabalhamos_1">
+					<div class="inner">
+						<h3>Como trabalhamos?</h3>
+						<p>Aliados aos objetivos de nossos clientes,
+							 unimos três grandes especialidades na realização de nossos serviços.</p>
+						<!-- Utilizar neste botao o mesmo estilo utilizado nas categorias dos trabalhos --> 
+                        <div class="botao">
+							<a href='#' class="botao_padrao2">
+								Saiba mais
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="trabalhamos_2">
+					<div class="trabalho-item">
+						<div class="tb-info">
+							<div class="tb-info-frente">
+								<span class="circulo">
+									<h3>1</h3>
+								</span>
+								<span class="texto">
+									<h4>Propaganda</h4>
+								</span>	
+							</div>
+							<div class="tb-info-tras">
+								<span class="titulo">
+									<h4>Propaganda</h4>
+								</span>
+								<span class="texto">
+									<p>Utilizada para divulgar valores de um marca, a propaganda é capaz 
+										de mudar comportamentos e transformar culturas. </p>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="trabalhamos_3">
+					<div class="trabalho-item">
+						<div class="tb-info">
+							<div class="tb-info-frente">
+								<span class="circulo">
+									<h3>1</h3>
+								</span>
+								<span class="texto">
+									<h4>Propaganda</h4>
+								</span>	
+							</div>
+							<div class="tb-info-tras">
+								<span class="titulo">
+									<h4>Propaganda</h4>
+								</span>
+								<span class="texto">
+									<p>Utilizada para divulgar valores de um marca, a propaganda é capaz 
+										de mudar comportamentos e transformar culturas. </p>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="trabalhamos_4">
+					<div class="trabalho-item">
+						<div class="tb-info">
+							<div class="tb-info-frente">
+								<span class="circulo">
+									<h3>1</h3>
+								</span>
+								<span class="texto">
+									<h4>Propaganda</h4>
+								</span>	
+							</div>
+							<div class="tb-info-tras">
+								<span class="titulo">
+									<h4>Propaganda</h4>
+								</span>
+								<span class="texto">
+									<p>Utilizada para divulgar valores de um marca, a propaganda é capaz 
+										de mudar comportamentos e transformar culturas. </p>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>			
+			</div>
+			<div id="intervalo3" class="intervalo">
+			</div>
+			<style>
+				
+			</style>
+			<div id="home_noticias" class="wrapper__">
+				<div class="noticias">
+					<h1>Fique por dentro do que temos feito</h1>
+					<div class="item_noticia">
+						
+						<hr class="linha_verde"/>
+						<h5>01 jan</h5>
+						<p>Proiz desenvolve campanha para lançamento da nova identidade visual de uma das mais antigas e tradicionais imobiliárias do oeste paranaense.</p>
+						<div class="wrapper_icon_noticias">
+	                        <a class="continue_lendo" href='#continuelendo'></a>
+							<div class="compartilhar_noticia">
+								<a class="compartilhar_face" href='#continuelendo'></a>
+								<a class="compartilhar_google" href='#continuelendo'></a>
+								<a class="compartilhar_twitter" href='#continuelendo'></a>
+							</div>
+						</div>
+					</div>
+					<div class="item_noticia">
+						<hr class="linha_verde"/>
+						<h5>01 jan</h5>
+						<p>Proiz desenvolve campanha para lançamento da nova identidade visual de uma das mais antigas e tradicionais imobiliárias do oeste paranaense.</p>
+						<div class="wrapper_icon_noticias">
+	                        <a class="continue_lendo" href='#continuelendo'></a>
+							<div class="compartilhar_noticia">
+								<a class="compartilhar_face" href='#continuelendo'></a>
+								<a class="compartilhar_google" href='#continuelendo'></a>
+								<a class="compartilhar_twitter" href='#continuelendo'></a>
+							</div>
+						</div>
+					</div>
+					<div class="item_noticia">
+						<hr class="linha_verde"/>
+						<h5>01 jan</h5>
+						<p>Proiz desenvolve campanha para lançamento da nova identidade visual de uma das mais antigas e tradicionais imobiliárias do oeste paranaense.</p>
+						<div class="wrapper_icon_noticias">
+	                        <a class="continue_lendo" href='#continuelendo'></a>
+							<div class="compartilhar_noticia">
+								<a class="compartilhar_face" href='#continuelendo'></a>
+								<a class="compartilhar_google" href='#continuelendo'></a>
+								<a class="compartilhar_twitter" href='#continuelendo'></a>
+							</div>
+						</div>
+					</div>
+				
+				<div class="bt_padrao1">
+					<a href=#>
+						<div class="circulo">
+							<span></span>
+						</div>
+						<div class="mensagem">
+							<p>Notícias</p>
+						</div>
+					</a>
+				</div>
+				
+				
+				</div>
+				
+			</div>
+		<div id="intervalo4" class="intervalo">
+		</div>	
+		</div>
+		
+		<div id="home_rodape">
+			<div class="midias_sociais">
+                <div class="mensagem" style="opacity: 1">
+                    <h4>Para quem não gosta de ficar sabendo das coisas por último</h4>
+                    <p>Conecte-se à Proiz através das mídias sociais</p>
+                </div>
+                <style>
+					
+				</style>
+                
+                <a href="#">Siga-nos no facebook</a>
+                <!--<ul class="ch-grid">
+                    <li class="ch-item">
+                        <div class="ch-info">
+                            <div class="ch-info-front ch-img-1"></div>
+                            <div class="ch-info-back">
+                                <p>Siga-nos no facebook</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ch-item">
+                        <div class="ch-info">
+                            <div class="ch-info-front ch-img-1"></div>
+                            <div class="ch-info-back">
+                                <p>Siga-nos no twitter</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ch-item">
+                        <div class="ch-info">
+                            <div class="ch-info-front ch-img-1"></div>
+                            <div class="ch-info-back">
+                                <p>Siga-nos no google</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>-->
+			</div>
+            <style>
+				.newsletter form {
+					height: 39px;	
+				}
+			</style>
+			<div class="newsletter" id="newsletter">
+				<h4>Insira seu e-mail para receber atualizações</h4>
+				
+                <form action="#" id="form_newsletter">
+					<input type="text" placeholder="" value="" size="30" />
+					<div class="bt_enviar">
+						<input type="submit" value="Cadastrar" />
+					</div>
+				</form>
+			</div>
+			<div class="rodape">
+				<div class="mensagem_wrapper">
+					<div class="mensagem">
+						<img src="images/logo_proiz_branco.png">
+						<p>Agência de comunicação integrada. Publicidade e propaganda, 
+							design gráfico e marketing digital. Soluções completas para a 
+							construção de marcas fortes.</p>
+					</div>
+				</div>
+				<div class="endereco">
+					<h3>+55 (45) 3378-3676</h3>
+					<h5>Rua Guarani, 2216.</h5>
+					<h5>Jardim La Salle.</h5>
+					<h5>Toledo - Paraná</h5>
+				</div>
+				
+			</div>
+			<footer>
+				<p>Proiz comunicação integrada - Todos os direitos reservados.</p>
+			</footer>
+		</div>	
+		
+	</body>
+		
+	</html>
