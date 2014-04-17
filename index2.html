@@ -25,7 +25,10 @@
 			<script src="js/main.js" type="text/javascript"></script>	
 			
 			<!-- Essa é o arquivo de efeitos da pagina inicial -->
-			<script src="js/index.js" type="text/javascript"></script>	
+			<script src="js/index.js" type="text/javascript"></script>
+			
+			<!-- Essa é o arquivo que habilita a função touch em dispositivos moveis -->
+			<script src="js/touch/hammer.min.js" type="text/javascript"></script>
 			
 		</head>
 	<body class="corpo">
@@ -52,7 +55,7 @@
 					<li><a href="#noticias" data-hover="NOTÍCIAS">NOTÍCIAS</a></li>
 					<li><a href="#contato" data-hover="CONTATO">CONTATO</a></li>
 				</ul>
-				<a href="#" id="pull">Menu</a> 
+				<a href="#" id="pull"></a> 
 				<div id="carregando">
 					<img src="images/carregando.png" />
 				</div>
@@ -107,7 +110,7 @@
 						<a href="#">esconder</a>
 					</div>
 				</div>
-				<div class="projetos_slider">
+				<div class="projetos_slider" id="projetos_slider">
 					<div class="slider_imagens">
 						<ul>
 							<li>
@@ -156,13 +159,21 @@
 			</div>
 			<div id="intervalo2" class="intervalo">
 			</div>
+			<style>
+				#home_comotrabalhamos {
+					
+				}
+				#home_comotrabalhamos > div {
+					
+				}
+			</style>
 			<div id="home_comotrabalhamos" class="">
 				<div class="trabalhamos_1">
-					<div class="inner">
+					<div class="inner" style="display: table;">
 						<h3>Como trabalhamos?</h3>
 						<p>Aliados aos objetivos de nossos clientes,
 							 unimos três grandes especialidades na realização de nossos serviços.</p>
-						<!-- Utilizar neste botao o mesmo estilo utilizado nas categorias dos trabalhos --> 
+						 
                         <div class="botao">
 							<a href='#' class="botao_padrao2">
 								Saiba mais
@@ -189,6 +200,9 @@
 									<p>Utilizada para divulgar valores de um marca, a propaganda é capaz 
 										de mudar comportamentos e transformar culturas. </p>
 								</span>
+								<span class="voltar">
+									  <img src="images/home_seta.png"/>
+									</span>
 							</div>
 						</div>
 					</div>
@@ -211,6 +225,9 @@
 								<span class="texto">
 									<p>Utilizada para divulgar valores de um marca, a propaganda é capaz 
 										de mudar comportamentos e transformar culturas. </p>
+								</span>
+								<span class="voltar">
+								  <img src="images/home_seta.png"/>
 								</span>
 							</div>
 						</div>
@@ -235,6 +252,9 @@
 									<p>Utilizada para divulgar valores de um marca, a propaganda é capaz 
 										de mudar comportamentos e transformar culturas. </p>
 								</span>
+								<span class="voltar">
+									  <img src="images/home_seta.png"/>
+									</span>
 							</div>
 						</div>
 					</div>
@@ -301,8 +321,8 @@
 				</div>
 				</div>
 			</div>
-		<div id="intervalo4" class="intervalo">
-		</div>	
+			<div id="intervalo4" class="intervalo">
+			</div>	
 		</div>
 		
 		<div id="home_rodape">

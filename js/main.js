@@ -87,24 +87,42 @@ $(document).ready(function(){
 		
 		
 	});*/
-	//Efeito no formulario do rodape ao clicar no h4	
+	//Efeito no formulario do rodape ao clicar no h4
+	jQuery(window).on("resize", function() {
+		if(!detectmob()) {
+			$("#home_rodape .newsletter form").hide();
+			$('#home_rodape .newsletter h4').show();
+			$('#home_rodape .newsletter').css('height','auto');
+		}
+	});
+	
+	
 	$('html').click(function(e) {
 		var target = $(e.target);    
 		if (target.parents('#home_rodape .newsletter').length) {
 			$('#home_rodape .newsletter h4').hide();
-			$("#home_rodape .newsletter").animate({
-				height : '39px'
-			},500,function() {
+			if($(window).width() > 500) {
+				$("#home_rodape .newsletter").animate({
+					height : '39px'
+				},500,function() {
+					$("#home_rodape .newsletter form").show();
+					$("#home_rodape .newsletter form input[type='text']").focus();
+				});
+			}else {
 				$("#home_rodape .newsletter form").show();
 				$("#home_rodape .newsletter form input[type='text']").focus();
-			});
+			}
 		}else {
 			$("#home_rodape .newsletter form").hide();
-			$("#home_rodape .newsletter").animate({
-				height : '22px'
-			},500,function() {
+			if($(window).width() > 500) {
+				$("#home_rodape .newsletter").animate({
+					height : '22px'
+				},500,function() {
+					$('#home_rodape .newsletter h4').show();
+				});
+			}else {
 				$('#home_rodape .newsletter h4').show();
-			});
+			}
 		}
 	});
 	$('#pull').click(function(e) {
@@ -117,3 +135,20 @@ $(document).ready(function(){
 		$("#home_rodape .newsletter h4").show();
 	});*/	
 });
+
+
+function detectmob() { 
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    return true;
+  }
+ else {
+    return false;
+  }
+}
