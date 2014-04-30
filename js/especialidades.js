@@ -47,18 +47,26 @@ $(function() {
 		$( "#especialidades .especialidades_drag_items, .especialidades_drag_items_min" ).droppable({
 			tolerance: 'pointer',
 			over: function(e, ui) {
+				$('.especialidades_drag_items_min').find('.wrapper_items').css('border', '3px solid #fff');
+				$('.especialidades_drag_items').css('border', '3px solid #fff');
+				
 			},
 			out: function(e, ui) {
+				$('.especialidades_drag_items_min').find('.wrapper_items').css('border', 'none');
+				$('.especialidades_drag_items').css('border', 'none');
 			},
 			drop: function(e, ui) {
+				$('.especialidades_drag_items_min').find('.wrapper_items').css('border', 'none');
+				$('.especialidades_drag_items').css('border', 'none');
+				
 				$('#especialidades .especialidades_drag_items, #especialidades .especialidades_drag_items_min').addClass('ocultar_frase');
 				//Muda a cor do fundo
 				$('#especialidades .especialidades_drag_items, #especialidades .especialidades_drag_items_min .wrapper_items').css('background','#78a22f');
 				
 				var possuiitem = false;
-				$('.especialidades_drag_items > div > span  img').each(function() {
-					var iditempassdo = ui.draggable[0].id;
+				$('.especialidades_drag_items > div > img').each(function() {
 					
+					var iditempassdo = ui.draggable[0].id;
 					if(this.id == iditempassdo) {
 						possuiitem = true;
 						return false;
